@@ -8,14 +8,15 @@
 using namespace std::chrono;
 using namespace std;
 
-bool valid(std::vector<int> l){
-    bool ascending = l[0] > l[1];
-    for (int i = 1; i < l.size(); i++){
-        int diff = l[i] - l[i-1];
+bool valid(std::vector<int>* l){
+    bool ascending = (*l)[0] > (*l)[1];
+    
+    for (int i = 1; i < (*l).size(); i++){
+        int diff = (*l)[i] - (*l)[i-1];
         if (diff < 0){
             diff = diff * -1;
         }
-        if (diff < 1 || diff > 3 || (ascending != (l[i] <l[i-1]))){
+        if (diff < 1 || diff > 3 || (ascending != ((*l)[i] <(*l)[i-1]))){
             return false;
         }
     }
@@ -56,8 +57,9 @@ int main()
     auto start = high_resolution_clock::now();
 
     for (int i = 0; i < fileData.size(); i++) {
-        vector<int> level = fileData[i];
-    if (valid(level)) {
+    vector<int> level = fileData[i];
+    vector<int>* levelptr = &level;
+    if (valid(levelptr)) {
         part1Answer++;
         part2Answer++;
     } else {
@@ -69,7 +71,8 @@ int main()
                     slicedArray.push_back(level[j]);
                 }
             }
-            if (valid(slicedArray)){
+            std::vector<int>* slicedArrayptr = &slicedArray;
+            if (valid(slicedArrayptr)){
                 part2Answer++;
                 break;
             }
