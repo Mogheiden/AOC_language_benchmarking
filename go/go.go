@@ -58,6 +58,5 @@ func valid(r []int) bool {
 			return false
 		}
 	}
-	// fmt.Println(r)
 	return true
 }
