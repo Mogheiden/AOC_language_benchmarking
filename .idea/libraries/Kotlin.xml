@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Kotlin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Kotlin/hello.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Kotlin/Kotlin.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
