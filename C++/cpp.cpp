@@ -25,6 +25,7 @@ bool valid(std::vector<int>* l){
 
 int main()
 {
+    auto start = high_resolution_clock::now();
     std::ifstream infile;
  
     infile.open("../input.txt");
@@ -52,9 +53,7 @@ int main()
     auto stopparse = high_resolution_clock::now();
     
     auto duration1 = duration_cast<microseconds>(stopparse - startparse);
-    cout << duration1.count() << endl;
-
-    auto start = high_resolution_clock::now();
+    // cout << duration1.count() << endl;
 
     for (int i = 0; i < fileData.size(); i++) {
     vector<int> level = fileData[i];
@@ -83,5 +82,5 @@ int main()
     // std::cout << part2Answer << std::endl;
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
-    cout << duration.count() << endl;
+    cout << "C++: " << duration.count() << endl;
 }

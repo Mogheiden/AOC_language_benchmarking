@@ -3,7 +3,7 @@ extern crate hashbrown;
 fn main() {
     let start = std::time::Instant::now();
     solution();
-    println!("Finished in {:?}", start.elapsed());
+    println!("Rust {:?}", start.elapsed());
 }
 
 pub fn solution() {

@@ -37,9 +37,9 @@ func main() {
 		}
 	}
 
-	fmt.Println(part1Answer)
-	fmt.Println(part2Answer)
-	fmt.Println(time.Since(start))
+	// fmt.Println(part1Answer)
+	// fmt.Println(part2Answer)
+	fmt.Println("GO:", time.Since(start))
 }
 
 func absolutediff(number1 int, number2 int) int {

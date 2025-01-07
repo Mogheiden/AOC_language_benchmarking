@@ -33,6 +33,6 @@ for line in input:
             part2Answer += 1
             break
 
-print(part1Answer)
-print(part2Answer)
-print((time.time() - start_time) * 1000)
+# print(part1Answer)
+# print(part2Answer)
+print("Python: ", (time.time() - start_time) * 1000)
